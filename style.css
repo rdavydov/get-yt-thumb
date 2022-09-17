@@ -1,3 +1,9 @@
+@media only screen and (max-width: 300px) {
+    body {
+      color: yellow;
+    }
+  }
+
 body, html {
     height: 100%;
     display: grid;
@@ -11,7 +17,7 @@ body {
 .main {
     margin: auto;
     text-align: center;
-    max-width: 50vw;
+    max-width: 90vw;
 }
 
 .center-fit {
@@ -19,8 +25,12 @@ body {
     max-width: 50vw;
 }
 
-.buttons * {
-    margin: 1em;
+.buttons button {
+    margin: 0.5em;
+}
+
+.buttons {
+    margin: 0.5em;
 }
 
 #fullpage {
@@ -43,8 +53,4 @@ footer {
 
 footer img {
     vertical-align: bottom;
-}
-
-footer a {
-    text-decoration: none;
 }
