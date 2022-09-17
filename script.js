@@ -4,10 +4,16 @@ function fullPage() {
     fullPage.style.display = 'block';
 }
 
-function dynamicUrl() {
+function dynamicUrl(type) {
     let url = document.getElementById('url').value;
     let id = url.match(/^((?:https?:)?\/\/)?((?:www|m)\.)?((?:youtube(-nocookie)?\.com|youtu.be))(\/(?:[\w\-]+\?v=|shorts\/|embed\/|v\/)?)([\w\-]+)(\S+)?$/)[6];
-    let imgUrl = `https://img.youtube.com/vi/${id}/maxresdefault.jpg`;
+    let imgUrl;
+    if (type === 1)
+        imgUrl = `https://img.youtube.com/vi/${id}/maxresdefault.jpg`;
+    else if (type === 2)
+        imgUrl = `https://img.youtube.com/vi_webp/${id}/maxresdefault.webp`;
+    else
+        imgUrl = `https://img.youtube.com/vi/${id}/hqdefault.jpg`;
     let img = document.getElementById('img');
     img.src = imgUrl;
 
@@ -17,8 +23,9 @@ function dynamicUrl() {
 function download() {
     let link = document.createElement('a');
     link.style.display = 'none';
-    link.href = dynamicUrl();
+    link.href = document.getElementById('img').src;
     link.download = 'get-yt-thumb.jpg';
+    link.target = '_blank';
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
