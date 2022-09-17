@@ -10,25 +10,16 @@ function dynamicUrl() {
     let imgUrl = `https://img.youtube.com/vi/${id}/maxresdefault.jpg`;
     let img = document.getElementById('img');
     img.src = imgUrl;
-}
 
-function downloadImage(url, name) {
-    fetch(url)
-        .then(resp => resp.blob())
-        .then(blob => {
-            const url = window.URL.createObjectURL(blob);
-            const a = document.createElement('a');
-            a.style.display = 'none';
-            a.href = url;
-            a.download = name;
-            document.body.appendChild(a);
-            a.click();
-            window.URL.revokeObjectURL(url);
-            a.cross
-        })
-        .catch(() => console.error('downloadImage error'));
+    return imgUrl;
 }
 
 function download() {
-    downloadImage(document.getElementById('img').src, "get-yt-thumb.jpg");
+    let link = document.createElement('a');
+    link.style.display = 'none';
+    link.href = dynamicUrl();
+    link.download = 'get-yt-thumb.jpg';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
 }
