@@ -1,22 +1,27 @@
+body, html {
+    height: 100%;
+    display: grid;
+  }
+  
 body {
     background-image: url('bg.jpg');
+    
 }
 
 .main {
-    display: grid;
-    place-content: center;
-    height: 100vh;
+    margin: auto;
+    text-align: center;
+    max-width: 50vw;
 }
 
 .center-fit {
     padding-top: 1em;
-    max-height: 45vh;
-    margin: 0 auto;
+    max-height: 50vh;
+    max-width: 50vw;
 }
 
-.buttons {
-    margin: 1em auto;
-    text-align: center;
+.buttons * {
+    margin: 1em;
 }
 
 #fullpage {
@@ -33,11 +38,10 @@ body {
     background-color: black;
 }
 
-h5,
 footer {
-    text-align: center;
+    margin: 1em;
 }
 
-footer {
-    padding-top: 1em;
+footer img {
+    vertical-align: bottom;
 }
