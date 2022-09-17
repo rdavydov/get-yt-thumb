@@ -7,7 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>🖼 Get YouTube Thumbnail</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
     <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
@@ -20,20 +21,21 @@
 <body>
     <div class="main">
         <header>
-            <h5>🖼 Get YouTube Thumbnail</h5>
+            <h4 class="display-6">🖼 Get YouTube Thumbnail</h4>
         </header>
-        <div class="control">
-            <label for="url">Enter YouTube video URL (supports .be, shorts, embed, with timestamps and
-                other clutter)</label>
-            <input name="url" type="text" id="url"
-                onfocus="if(this.value == 'https://www.youtube.com/watch?v=k8mOAV0KJLE') { this.value = ''; }"
-                onblur="if(this.value == '') { this.value = 'https://www.youtube.com/watch?v=k8mOAV0KJLE'; }"
-                value="https://www.youtube.com/watch?v=k8mOAV0KJLE" />
-            <div class="buttons">
-                <button class="btn" onclick="dynamicUrl()">👀 Get Thumbnail</button>
-                <button class="btn" onclick="download()">⏬ Download Thumbnail</button>
-            </div>
+        <hr>
+        <label for="url" class="form-label lead">Enter YouTube video URL (supports .be, shorts, embed, with timestamps
+            and
+            other clutter)</label>
+        <input name="url" type="search" id="url" class="form-control"
+            onfocus="if(this.value == 'https://www.youtube.com/watch?v=k8mOAV0KJLE') { this.value = ''; }"
+            onblur="if(this.value == '') { this.value = 'https://www.youtube.com/watch?v=k8mOAV0KJLE'; }"
+            value="https://www.youtube.com/watch?v=k8mOAV0KJLE" />
+        <div class="buttons">
+            <button class="btn btn-primary" onclick="dynamicUrl()">👀 Get Thumbnail</button>
+            <button class="btn btn-success" onclick="download()">⏬ Download Thumbnail</button>
         </div>
+
         <img class="center-fit" id="img" onclick="fullPage()" title="Click to zoom in/out"
             src="https://img.youtube.com/vi/k8mOAV0KJLE/maxresdefault.jpg" />
         <footer>

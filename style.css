@@ -15,7 +15,6 @@ body {
 }
 
 .center-fit {
-    padding-top: 1em;
     max-height: 50vh;
     max-width: 50vw;
 }
@@ -44,4 +43,8 @@ footer {
 
 footer img {
     vertical-align: bottom;
+}
+
+footer a {
+    text-decoration: none;
 }

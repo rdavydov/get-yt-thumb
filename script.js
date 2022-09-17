@@ -1,4 +1,3 @@
-// ADD CLEAR INPUT BTN
 function fullPage() {
     const fullPage = document.querySelector('#fullpage');
     fullPage.style.backgroundImage = 'url(' + document.getElementById('img').src + ')';
@@ -21,7 +20,6 @@ function downloadImage(url, name) {
             const a = document.createElement('a');
             a.style.display = 'none';
             a.href = url;
-            // the filename you want
             a.download = name;
             document.body.appendChild(a);
             a.click();
