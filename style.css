@@ -1,0 +1,43 @@
+body {
+    background-image: url('bg.jpg');
+}
+
+.main {
+    display: grid;
+    place-content: center;
+    height: 100vh;
+}
+
+.center-fit {
+    padding-top: 1em;
+    max-height: 45vh;
+    margin: 0 auto;
+}
+
+.buttons {
+    margin: 1em auto;
+    text-align: center;
+}
+
+#fullpage {
+    display: none;
+    position: absolute;
+    z-index: 9999;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-size: contain;
+    background-repeat: no-repeat no-repeat;
+    background-position: center center;
+    background-color: black;
+}
+
+h5,
+footer {
+    text-align: center;
+}
+
+footer {
+    padding-top: 1em;
+}

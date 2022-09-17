@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🖼 Get YouTube Thumbnail</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+</head>
+
+<body>
+    <div class="main">
+        <header>
+            <h5>🖼 Get YouTube Thumbnail</h5>
+        </header>
+        <div>
+            <label for="url">Enter YouTube video URL (supports .be, shorts, embed, with timestamps and
+                other clutter)</label>
+            <input name="url" type="text" id="url"
+                onfocus="if(this.value == 'https://www.youtube.com/watch?v=k8mOAV0KJLE') { this.value = ''; }"
+                onblur="if(this.value == '') { this.value = 'https://www.youtube.com/watch?v=k8mOAV0KJLE'; }"
+                value="https://www.youtube.com/watch?v=k8mOAV0KJLE" />
+            <div class="buttons">
+                <button class="btn" onclick="dynamicUrl()">👀 Get Thumbnail</button>
+                <button class="btn" onclick="download()">⏬ Download Thumbnail</button>
+            </div>
+        </div>
+        <img class="center-fit" id="img" onclick="fullPage()" title="Click to zoom in/out"
+            src="https://img.youtube.com/vi/k8mOAV0KJLE/maxresdefault.jpg" />
+        <footer>
+            <div>Made with ♥ by <a href="https://github.com/rdavydov">https://github.com/rdavydov</a></div>
+        </footer>
+    </div>
+    <div id="fullpage" title="Click to zoom in/out" onclick="this.style.display='none';"></div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
