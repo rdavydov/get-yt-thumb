@@ -24,6 +24,7 @@ function downloadImage(url, name) {
             document.body.appendChild(a);
             a.click();
             window.URL.revokeObjectURL(url);
+            a.cross
         })
         .catch(() => console.error('downloadImage error'));
 }
