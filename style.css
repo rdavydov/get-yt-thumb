@@ -53,4 +53,12 @@ footer {
 
 footer img {
     vertical-align: bottom;
+    transition-duration: 2s;
+    transition-property: transform;
+}
+
+footer img:hover,
+footer a:hover img {
+    transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
 }
